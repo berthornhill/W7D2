@@ -13,3 +13,35 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  font-family: monospace;
+  background-color: rgba(78, 134, 199, 0.658);
+}
+
+header {
+  width: 100%;
+  background-color: rgb(78, 134, 199);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  margin-left: 10px;
+  font-size: 8vw;
+  /* font-weight: bold; */
+  font-family: monospace;
+}
+
+header .sign-in-button a {
+  font-size: 18px;
+  font-family: monospace;
+  margin: 30px;
+  display: flex;
+  justify-self: space-between;
+  background-color: rgba(73, 103, 139, 0.925);
+  padding: 10px;
+  border-radius: 2px;
+  color: aliceblue;
+}

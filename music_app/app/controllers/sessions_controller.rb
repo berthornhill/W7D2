@@ -5,11 +5,11 @@ class SessionsController < ApplicationController
     end
 
     def create
-        @user =  User.find_by_credentials(params[:user][:username], params[:user][:password])
-
+        @user =  User.find_by_credentials(params[:user][:email], params[:user][:password])
+        debugger
         if @user 
             session[:session_token] = @user.reset_session_token!
-            redirect_to users_url(@user)
+            redirect_to user_url(@user)
         else
             flash.now[:errors] = ['Invalid credentials']
             render :new
